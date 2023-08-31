@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            My First page
+        </title>
+        <style>
+            .top-menu-bar {
+                width: 100%;  
+                height: 40px;  
+                background-color:rgb(36, 196, 92); 
+                position: fixed;  
+                top: 0;  
+                left: 0;  
+                /* z-index: 1000; */
+                display: flex; 
+                justify-content: space-between;
+            }
+       
+            .main-content {
+                 margin-left: 25%;
+                 padding-top: 50px;  /* This is to avoid the overlap with the fixed menu-bar */
+            }
+
+            
+            
+            .menu-bar {
+                width: 100%;  /* Make it span the full width of the page */
+                height: 50px;  /* Adjust as needed */
+                background-color: #333;  /* Color of the menu bar */
+                position: fixed;  /* This will make it stick to the top */
+                top: 40px;  /* Position it right at the top */
+                left: 0;  /* Align it to the left */
+                /* z-index: 1000;  Put it on top of other elements */
+                display: flex; 
+                justify-content: space-between;
+            }
+
+            .task-bar {
+                position: fixed;   /* This will keep it in place when you scroll */
+                top: 90px;         /* Push it down below the menu-bar */
+                left: 0;
+                width: 25%;     /* Roughly 1/3 of the viewport width */
+                height: 100%; /* The height of the viewport minus the height of the menu-bar and topmenubar */
+                background-color: #333;    /* A color for visualization, you can adjust */
+                overflow-y: auto;  /* If content inside the task-bar exceeds its height, a scrollbar will appear */
+                z-index: 999;      /* So it's below the menu-bar in stacking order */
+            }
+            .stab{
+               
+                font:400;
+                color: white;
+                font-weight: 400;  /* Corrected from 'font' to 'font-weight' */
+                padding: 10px 15px;  /* Padding around the text to give the button appearance */
+                background-color: rgb(36, 196, 92);  /* Background color of the button */
+                text-decoration: none;  /* Remove the underline from the links */
+                /* border-radius: 5px;  Rounded corners */
+                transition: box-shadow 0.3s, background-color 0.3s  /* Smooth transition for hover effect */
+            }
+            .stab:hover{
+                background-color: #20c5c2;
+            }               
+            .tab{
+                
+                font:400;
+                color: white;
+                font-weight: 400;  /* Corrected from 'font' to 'font-weight' */
+                padding: 10px 15px;  /* Padding around the text to give the button appearance */
+                background-color: #333;  /* Background color of the button */
+                text-decoration: none;  /* Remove the underline from the links */
+                /* border-radius: 5px;  Rounded corners */
+                transition: box-shadow 0.3s, background-color 0.3s  /* Smooth transition for hover effect */
+            }
+            .tab:hover{
+                background-color: #777;
+                /* box-shadow: 0 0 0 10px rgb(60, 60, 66);  This adds a blue "padding" effect around the button */
+
+            }
+            #mybigtitle{
+                color:rgb(14, 39, 231);
+                text-align:center;
+            }
+            table{
+                border: 1px solid black;
+                border-collapse:collapse;
+            }
+            td{
+                border: 1px solid black;
+                padding: 2px;
+            }
+            th{
+                border: 1px solid black;
+                padding: 2px;
+            }
+          
+        </style>
+        <!-- <link rel="stylesheet" href="styling.css"> -->
+    
+    </head>
+    <body>
+       <div class="top-menu-bar">
+        <a href="https://www.linkedin.com/in/jordankitio/" class="stab">Linkedin</a>
+        <a href="https://www.instagram.com/" class="stab">Instagram</a>
+        <a href="https://www.google.com" class="stab">Google</a>
+
+       </div>"
+        <div class="menu-bar">
+            <a href="https://www.linkedin.com/in/jordankitio/" class="tab">Linkedin</a>
+            <a href="https://www.instagram.com/" class="tab">Instagram</a>
+            <a href="https://www.google.com" class="tab">Google</a>
+        </div>
+       
+        
+        <!-- <div style="padding-top: 20px;"></div> -->
+        <div class="task-bar"></div>
+        <div class="main-content">
+      
+        <h1 id="mybigtitle">Jordan's Portfolio</h1>    
+        <h3>This page puts togther all i have learn and will progressively change</h3>
+      
+        First, let's talk about list.
+        <h5>Here is an example of an <strong>UNORDERED LIST</strong> list:</h5>
+         <ul>
+            <li>thing 1</li>
+            <li>thing 2</li>
+            <li><i>thing 3</i> but in italic</li>
+         </ul>
+
+    
+        <h5>Here is an example of an <strong>ORDERED</strong></h5>
+         <ol>
+            <li>thing 1</li>
+            <li>thing 2</li>
+            <li>thing 3</li>
+
+            </ol>
+      
+        <h5>Now let's add a picture on this page <i>(Look at HTML code for modifications involved)</i></h5>
+        <h5>Here is the image:</h5>
+        <img src="/Users/kitiojor/Downloads/cutedog.jpeg" alt="Picture of a cute dog">
+        <p>More details on how to do this at: <a href="https://www.canto.com/blog/insert-image-html/"><strong>canto</strong></a></p>
+            
+        <p>Now let's see how we can collect information from users. This is call <strong><i>FORMS</i></strong><br>
+        This link goes into details on how you can achieve that: <a href="https://www.w3schools.com/html/html_forms.asp">W3 Schools</a> <br>
+        For the purpose of this Portfolio, we will only use the syntax "type", "place holder","name". It looks something like this:<br></p>
+        <img src="/Users/kitiojor/Desktop/Screenshot 2023-08-24 at 11.06.47 PM.png" alt="Screenshot of the code">
+        <p>For example:
+        </p>
+        
+        <form>
+
+            NAME:<input type="text" placeholder="ENTER FIRST NAME" name="FIRST">
+            PASSWORD: <input type="password" placeholder="ENTER PASSWORD" name="PASSWORD">
+
+            <p>Select your secret color <br>
+            
+
+                <input class= button type="radio" name="color" value="Blue">Blue 
+                <input class= button type="radio" name="color" value="green">Green 
+                <input class= button type="radio" name="color" value="yellow">Yellow 
+                <input class= button type="radio" name="color" value="red">Red <br>
+                <input class= button type="submit" onmouseover="this.style.backgroundColor='green'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='';">
+            </p>
+          
+        </form>
+        
+
+        <p>Now let's create a quick table, but with a twitst to it. We will create input spaces for each category:</p>
+        <table>
+            <thead>
+                <th>credit cards</th>
+                <th>Holder</th>
+                <th>gender</th>
+                <th>first name</th>
+                <th>middle initial</th>
+                <th>last name</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>AMEX</td>
+                    <td>
+                        <form>
+                            <!-- <input type="text" placeholder="yes/no"> -->
+                            <select>
+                                <option></option>
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <select>
+                                <option></option>
+                                <option value="male">male</option>
+                                <option value="female">female</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <input type="text">
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <input type="text">
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <input type="text">
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CapitalOne</td>
+                    <td>
+                        <form>
+                            <select>
+                                <option></option>
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <select>
+                                <option></option>
+                                <option value="male">male</option>
+                                <option value="female">female</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <input type="text">
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <input type="text">
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <input type="text">
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Discovery</td>
+                    <td>
+                        <form>
+                            <select>
+                                <option></option>
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <select>
+                                <option></option>
+                                <option value="male">male</option>
+                                <option value="female">female</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <input type="text">
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <input type="text">
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <input type="text">
+                        </form>
+                    </td>
+                </tr>
+
+            </tbody>
+            
+        </table>
+        <input class= button type="submit" onmouseover="this.style.backgroundColor='green'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='';">
+         </div>
+    
+
+
+
+    </body>
+
+
+
+
+
+
+
+    
+    </html>
